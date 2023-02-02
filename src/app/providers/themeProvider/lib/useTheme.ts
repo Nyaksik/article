@@ -1,5 +1,5 @@
-import {Theme, THEME_KEY, ThemeContext} from "./ThemeContext";
 import {useContext} from "react";
+import {Theme, THEME_KEY, ThemeContext} from "app/providers/themeProvider/lib/ThemeContext";
 
 interface IUseTheme {
 	toggleTheme: () => void
