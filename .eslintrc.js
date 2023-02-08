@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'standard-with-typescript',
+    'plugin:i18next/recommended'
   ],
   overrides: [
   ],
@@ -20,13 +21,15 @@ module.exports = {
     project: ['./tsconfig.json']
   },
   plugins: [
-    'react'
+    'react',
+    'i18next'
   ],
   rules: {
     'react/react-in-jsx-scope': 0,
     '@typescript-eslint/prefer-nullish-coalescing': 0,
     '@typescript-eslint/strict-boolean-expressions': 0,
     '@typescript-eslint/naming-convention': 0,
-    '@typescript-eslint/no-floating-promises': 0
+    '@typescript-eslint/no-floating-promises': 0,
+    'i18next/no-literal-string': ['error', { markupOnly: true }]
   }
 }
