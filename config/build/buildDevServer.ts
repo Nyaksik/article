@@ -1,10 +1,11 @@
-import {BuildOptions} from "./types";
-import { Configuration } from 'webpack-dev-server'
+import { type BuildOptions } from './types'
+import { type Configuration } from 'webpack-dev-server'
 
-export default function ({ port}: BuildOptions): Configuration {
+export default function ({ port }: BuildOptions): Configuration {
   return {
     port,
     open: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    hot: true
   }
 }
