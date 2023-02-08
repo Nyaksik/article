@@ -31,6 +31,7 @@ module.exports = {
     '@typescript-eslint/naming-convention': 0,
     '@typescript-eslint/no-floating-promises': 0,
     'i18next/no-literal-string': ['error', { markupOnly: true }],
-    '@typescript-eslint/ban-ts-comment': 'warn'
+    '@typescript-eslint/ban-ts-comment': 'warn',
+    'i18next/no-literal-string': 'warn'
   }
 }

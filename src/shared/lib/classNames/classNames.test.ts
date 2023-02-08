@@ -33,6 +33,6 @@ describe('classNames', function () {
   test('all params', () => {
     const expected = 'someClass class1 hovered'
 
-    expect(classNames('someClass', { hovered: true }, ['class1'])).toBe(expected)
+    expect(classNames('someClass', { hovered: true, active: false }, ['class1'])).toBe(expected)
   })
 })
