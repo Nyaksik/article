@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true
   },
   extends: [
     'plugin:react/recommended',
@@ -13,7 +14,11 @@ module.exports = {
       version: 'detect'
     }
   },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json'
@@ -29,13 +34,17 @@ module.exports = {
     '@typescript-eslint/naming-convention': 0,
     '@typescript-eslint/no-floating-promises': 0,
     'i18next/no-literal-string': ['warn', { markupOnly: true }],
-    '@typescript-eslint/ban-ts-comment': 'warn'
+    '@typescript-eslint/ban-ts-comment': 'warn',
+    '@typescript-eslint/consistent-type-assertions': 0,
+    '@typescript-eslint/explicit-function-return-type': 0,
+    'react/display-name': 0,
+    '@typescript-eslint/prefer-includes': 0
   },
   overrides: [
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
       rules: {
-        'i18next/no-literal-string': 0
+        'i18next/no-literal-string': 'off'
       }
     }
   ]

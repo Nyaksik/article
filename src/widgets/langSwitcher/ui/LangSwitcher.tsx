@@ -1,6 +1,6 @@
 import classNames from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { Button, ThemeButton } from 'shared/button/Button'
+import { Button, ThemeButton } from 'shared/ui/button/Button'
 import { type FC } from 'react'
 
 interface ILangSwitcherProps {

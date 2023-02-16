@@ -10,15 +10,24 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "*": [
+        "./src/*"
+      ]
     },
-    "esModuleInterop": true, // позволяет работать с пакетами, которые используют common js
-    "allowSyntheticDefaultImports": true // добавляет дефолтный импорт, если его нет
+    // позволяет работать с пакетами, которые используют common js
+    "esModuleInterop": true,
+    // добавляет дефолтный импорт, если его нет
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-  "include": ["./config/jest/jest-setup.ts"]
+  "include": [
+    "./config",
+    "./.eslintrc.js",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
 }
