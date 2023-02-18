@@ -25,6 +25,7 @@
     }
   },
   "include": [
+    "./webpack.config.ts",
     "./config",
     "./.eslintrc.js",
     "./src/**/*.ts",
