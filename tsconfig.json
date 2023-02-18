@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "ESNext",
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
@@ -27,7 +27,6 @@
   "include": [
     "./webpack.config.ts",
     "./config",
-    "./.eslintrc.js",
     "./src/**/*.ts",
     "./src/**/*.tsx"
   ]
