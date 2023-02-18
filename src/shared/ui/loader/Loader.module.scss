@@ -7,7 +7,7 @@
 
 .Loader div {
   transform-origin: 40px 40px;
-  animation: Loader 1.2s linear infinite;
+  animation: loader 1.2s linear infinite;
 }
 
 .Loader div::after {
@@ -82,7 +82,7 @@
   animation-delay: 0s;
 }
 
-@keyframes Loader {
+@keyframes loader {
   0% {
     opacity: 1;
   }
