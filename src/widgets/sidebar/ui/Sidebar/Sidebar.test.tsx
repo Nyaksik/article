@@ -1,10 +1,10 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { Sidebar } from './Sidebar'
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation'
+import { ComponentRender } from 'shared/lib/tests/componentRender/ComponentRender'
 
 describe('button', () => {
   test('toggle', () => {
-    renderWithTranslation(<Sidebar />)
+    ComponentRender(<Sidebar />, { route: '/' })
 
     const toggleButton = screen.getByTestId('sidebar-toggle')
 
