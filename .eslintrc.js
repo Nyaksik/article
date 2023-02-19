@@ -21,7 +21,8 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json'
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname
   },
   plugins: [
     'react',
@@ -47,5 +48,6 @@ module.exports = {
         'i18next/no-literal-string': 'off'
       }
     }
-  ]
+  ],
+  ignorePatterns: ['scripts', '.eslintrc.js']
 }

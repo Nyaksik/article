@@ -29,5 +29,6 @@
     "./config",
     "./src/**/*.ts",
     "./src/**/*.tsx"
-  ]
+  ],
+  "exclude": ["scripts"]
 }
