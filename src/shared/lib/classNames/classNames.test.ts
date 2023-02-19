@@ -26,7 +26,6 @@ describe('classNames', function () {
   test('with mods undefined', () => {
     const expected = 'someClass hovered'
 
-    // @ts-expect-error
     expect(classNames('someClass', { hovered: true, active: undefined })).toBe(expected)
   })
 
