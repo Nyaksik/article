@@ -26,7 +26,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'i18next'
+    'i18next',
+    'react-hooks'
   ],
   rules: {
     'react/react-in-jsx-scope': 0,
@@ -39,7 +40,9 @@ module.exports = {
     '@typescript-eslint/consistent-type-assertions': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
     'react/display-name': 0,
-    '@typescript-eslint/prefer-includes': 0
+    '@typescript-eslint/prefer-includes': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error'
   },
   overrides: [
     {

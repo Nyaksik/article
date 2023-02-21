@@ -1,4 +1,3 @@
-import './styles/index.scss'
 import classNames from 'shared/lib/classNames/classNames'
 import { useTheme } from 'app/providers/themeProvider'
 import { Navbar } from 'widgets/navbar'
@@ -12,12 +11,12 @@ const App: FC = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback={<div>Loading...</div>}>
-       <Navbar />
+        <Navbar/>
 
         <div className="content-page">
-          <Sidebar />
+          <Sidebar/>
 
-          <AppRouter />
+          <AppRouter/>
         </div>
       </Suspense>
     </div>

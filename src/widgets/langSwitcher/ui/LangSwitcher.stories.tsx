@@ -2,7 +2,6 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react'
 
 import { LangSwitcher } from './LangSwitcher'
 
-import 'app/styles/index.scss'
 import { Theme } from 'app/providers/themeProvider'
 import { themeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
 
