@@ -4,15 +4,18 @@ import { ThemeProvider } from 'app/providers/themeProvider'
 import App from 'app/App'
 import 'shared/config/i18n/i18n'
 import { ErrorBoundary } from 'app/providers/errorBoundery'
-import './app/styles/index.scss'
+import 'app/styles/index.scss'
+import { StoreProvider } from 'app/providers/storeProvider'
 
 render(
-  <BrowserRouter>
-    <ErrorBoundary>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </ErrorBoundary>
-  </BrowserRouter>,
+  <StoreProvider>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ErrorBoundary>
+    </BrowserRouter>
+  </StoreProvider>,
   document.getElementById('root')
 )
