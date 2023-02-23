@@ -16,6 +16,8 @@ export default function (): IUseTheme {
       setTheme(newTheme)
     }
 
+    document.body.className = newTheme
+
     localStorage.setItem(THEME_KEY, newTheme)
   }
 
