@@ -63,7 +63,7 @@ export default function ({ isDev }: BuildOptions): RuleSetRule[] {
     babelLoader,
     tsLoader,
     styleLoader,
-    svgLoader,
-    fileLoader
+    fileLoader,
+    svgLoader
   ]
 }
