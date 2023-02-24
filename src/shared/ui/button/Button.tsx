@@ -30,12 +30,19 @@ export const Button: FC<IButtonProps> = (props) => {
     size = ButtonSize.M,
     children,
     theme = ButtonTheme.CLEAR,
+    disabled,
+    type = 'button',
     ...otherProps
   } = props
 
   return (
     <button
-      className={classNames(cls.Button, { [cls.square]: square }, [className, cls[size], cls[theme]])} {...otherProps}>
+      type={type}
+      disabled={disabled}
+      className={classNames(cls.Button, {
+        [cls.square]: square,
+        [cls.disabled]: disabled
+      }, [className, cls[size], cls[theme]])} {...otherProps}>
       {children}
     </button>
   )

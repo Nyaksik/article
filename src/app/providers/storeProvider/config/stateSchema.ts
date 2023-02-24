@@ -1,7 +1,7 @@
-import { type ICounterSchema } from 'entities/counter'
 import { type IUserSchema } from 'entities/user'
+import { type ILoginSchema } from 'features/authByLogin'
 
 export interface IStateSchema {
-  counter: ICounterSchema
   user: IUserSchema
+  login: ILoginSchema
 }

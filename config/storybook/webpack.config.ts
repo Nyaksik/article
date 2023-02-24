@@ -1,4 +1,4 @@
-import { type Configuration, type RuleSetRule } from 'webpack'
+import { type Configuration, DefinePlugin, type RuleSetRule } from 'webpack'
 import { type BuildPath } from '../build/types'
 import path from 'path'
 
@@ -43,6 +43,10 @@ export default ({ config }: { config: Configuration }) => {
       'sass-loader'
     ]
   })
+
+  config.plugins?.push(new DefinePlugin({
+    __IS_DEV__: true
+  }))
 
   return config
 }

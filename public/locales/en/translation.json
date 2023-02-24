@@ -8,7 +8,10 @@
   "Короткий язык": "En",
   "Главная": "Home",
   "О сайте": "About",
-  "Войти": "Sing up",
+  "Войти": "Login",
   "Логин": "Login",
-  "Пароль": "Password"
+  "Пароль": "Password",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password",
+  "Выйти": "Logout"
 }
