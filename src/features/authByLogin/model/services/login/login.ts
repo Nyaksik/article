@@ -27,7 +27,7 @@ export const login = createAsyncThunk<IUser, ILogin>(
       return response.data
     } catch (e) {
       console.log(e)
-      return thunkAPI.rejectWithValue('Ошибка')
+      return thunkAPI.rejectWithValue('error')
     }
   }
 )
