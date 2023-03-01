@@ -12,5 +12,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { "name": "typicode",
+    "first": "Макс",
+    "last": "Няхуй",
+    "age": 26,
+    "currency": "RUB",
+    "country": "Russian",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": ""
+  }
 }

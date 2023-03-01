@@ -1,5 +1,5 @@
 import cls from './Text.module.scss'
-import { type FC } from 'react'
+import { type FC, memo } from 'react'
 import classNames from 'shared/lib/classNames/classNames'
 
 export enum TextTheme {
@@ -14,19 +14,21 @@ interface ITextProps {
   theme?: TextTheme
 }
 
-export const Text: FC<ITextProps> = (props) => {
-  const {
-    className = '',
-    title,
-    text,
-    theme = TextTheme.PRIMARY
-  } = props
+export const Text: FC<ITextProps> = memo(
+  (props: ITextProps) => {
+    const {
+      className = '',
+      title,
+      text,
+      theme = TextTheme.PRIMARY
+    } = props
 
-  return (
-    <div className={classNames(cls.Text, {}, [className, cls[theme]])}>
-      {title && <p className={cls.title}>{title}</p>}
+    return (
+      <div className={classNames(cls.Text, {}, [className, cls[theme]])}>
+        {title && <p className={cls.title}>{title}</p>}
 
-      {text && <p className={cls.text}>{text}</p>}
-    </div>
-  )
-}
+        {text && <p className={cls.text}>{text}</p>}
+      </div>
+    )
+  }
+)

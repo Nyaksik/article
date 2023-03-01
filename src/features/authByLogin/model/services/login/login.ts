@@ -8,13 +8,11 @@ interface ILogin {
   password: string
 }
 
-export const login = createAsyncThunk<IUser, ILogin>(
+export const login = createAsyncThunk<IUser, ILogin, { rejectValue: string }>(
   'login/login',
-  async ({ login, password }, thunkAPI) => {
+  async (authData, thunkAPI) => {
     try {
-      const response = await axios.post('http://localhost:8000/login', {
-        login, password
-      })
+      const response = await axios.post<IUser>('http://localhost:8000/login', authData)
 
       if (!response.data) {
         throw new Error()

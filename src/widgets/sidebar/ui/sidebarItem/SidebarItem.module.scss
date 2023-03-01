@@ -1,0 +1,19 @@
+.link {
+  display: flex;
+  align-items: center;
+
+  &.collapsed {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    transition: visibility 0.3s, opacity 0.3s, width 0.3s;
+  }
+
+  span {
+    margin-left: 8px;
+  }
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+}

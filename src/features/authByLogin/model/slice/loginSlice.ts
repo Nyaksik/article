@@ -24,7 +24,6 @@ export const loginSlice = createSlice({
       .addCase(login.rejected, (state, action) => {
         state.isLoading = false
 
-        // @ts-expect-error
         state.error = action.payload
       })
       .addCase(login.pending, (state, action) => {

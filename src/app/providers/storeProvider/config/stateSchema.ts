@@ -7,10 +7,12 @@ import {
   type Reducer,
   type ReducersMapObject
 } from '@reduxjs/toolkit'
+import { type IProfileSchema } from 'entities/profile'
 
 export interface IStateSchema {
   user: IUserSchema
   login?: ILoginSchema
+  profile?: IProfileSchema
 }
 
 export type StateSchemaKey = keyof IStateSchema
