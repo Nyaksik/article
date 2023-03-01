@@ -42,7 +42,12 @@ module.exports = {
     'react/display-name': 0,
     '@typescript-eslint/prefer-includes': 0,
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error'
+    'react-hooks/exhaustive-deps': 'error',
+    '@typescript-eslint/no-misused-promises': [2, {
+      "checksVoidReturn": {
+        "attributes": false
+      }
+    }]
   },
   overrides: [
     {
