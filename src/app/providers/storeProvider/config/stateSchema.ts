@@ -8,6 +8,8 @@ import {
   type ReducersMapObject
 } from '@reduxjs/toolkit'
 import { type IProfileSchema } from 'entities/profile'
+import { type AxiosInstance } from 'axios'
+import { type NavigateOptions, type To } from 'react-router-dom'
 
 export interface IStateSchema {
   user: IUserSchema
@@ -26,4 +28,14 @@ export interface IReducerManager {
   reduce: (state: IStateSchema, action: AnyAction) => CombinedState<IStateSchema>
   add: (key: StateSchemaKey, reducer: Reducer) => void
   remove: (key: StateSchemaKey) => void
+}
+
+export interface IThunkExtraArg {
+  api: AxiosInstance
+  navigate?: (to: To, options?: NavigateOptions) => void
+}
+
+export interface IThunkConfig<T = string> {
+  rejectValue: T
+  extra: IThunkExtraArg
 }

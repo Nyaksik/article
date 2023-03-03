@@ -8,6 +8,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "strictNullChecks": true,
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "*": [

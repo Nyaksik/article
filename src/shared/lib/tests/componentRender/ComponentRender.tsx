@@ -15,14 +15,14 @@ export function ComponentRender (component: ReactNode, options: IComponentRender
   const { route, initialState } = options
 
   return render(
-    <StoreProvider initialState={initialState}>
-      <MemoryRouter initialEntries={[route]}>
-        <Suspense fallback={<div></div>}>
-          <I18nextProvider i18n={i18nForTests}>
-            {component}
-          </I18nextProvider>
-        </Suspense>
-      </MemoryRouter>
-    </StoreProvider>
+    <MemoryRouter initialEntries={[route]}>
+      <StoreProvider initialState={initialState}>
+          <Suspense fallback={<div></div>}>
+            <I18nextProvider i18n={i18nForTests}>
+              {component}
+            </I18nextProvider>
+          </Suspense>
+      </StoreProvider>
+    </MemoryRouter>
   )
 }

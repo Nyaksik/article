@@ -41,7 +41,7 @@ const LoginForm = memo(({ className, onSuccess }: ILoginFormProps) => {
   }, [dispatch])
 
   const onLogin = useCallback(async () => {
-    // TODO проверить типы
+    // TODO разобраться с типами
     // @ts-expect-error
     // eslint-disable-next-line @typescript-eslint/await-thenable
     const result = await dispatch(authByLogin({

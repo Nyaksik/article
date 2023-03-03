@@ -45,7 +45,8 @@ export default ({ config }: { config: Configuration }) => {
   })
 
   config.plugins?.push(new DefinePlugin({
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: JSON.stringify('')
   }))
 
   return config

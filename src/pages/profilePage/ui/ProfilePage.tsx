@@ -1,7 +1,7 @@
-import { type FC } from 'react'
-import { useTranslation } from 'react-i18next'
+import { type FC, useEffect } from 'react'
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/dynamicModuleLoader/DynamicModuleLoader'
-import { profileReducer } from 'entities/profile'
+import { fetchProfileData, ProfileCard, profileReducer } from 'entities/profile'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -12,12 +12,18 @@ interface IProfilePageProps {
 }
 
 const ProfilePage: FC<IProfilePageProps> = ({ className }) => {
-  const { t } = useTranslation()
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    // TODO разобраться с типами
+    // @ts-expect-error
+    dispatch(fetchProfileData())
+  }, [dispatch])
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
       <div>
-        {t('Страница профиля')}
+        <ProfileCard />
       </div>
     </DynamicModuleLoader>
   )
