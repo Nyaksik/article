@@ -1,9 +1,17 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
   "users": [
     {
@@ -12,8 +20,9 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode",
-    "first": "Макс",
+  "profile": {
+    "name": "typicode",
+    "first": "Макс1",
     "last": "Няхуй",
     "age": 26,
     "currency": "RUB",

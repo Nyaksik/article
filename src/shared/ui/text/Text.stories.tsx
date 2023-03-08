@@ -1,6 +1,6 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react'
 
-import { Text, TextTheme } from './Text'
+import { Text, TextAlign, TextTheme } from './Text'
 
 import { themeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from 'app/providers/themeProvider'
@@ -43,4 +43,12 @@ Error.args = {
   title: 'Title',
   text: 'text',
   theme: TextTheme.ERROR
+}
+
+export const TextAlignCenter = Template.bind({})
+TextAlignCenter.args = {
+  title: 'Title',
+  text: 'text',
+  theme: TextTheme.ERROR,
+  align: TextAlign.CENTER
 }

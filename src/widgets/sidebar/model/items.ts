@@ -1,5 +1,5 @@
 import type React from 'react'
-import { RouterPath } from 'shared/config/routeConfig/routeConfig'
+import { RouterPath } from 'shared/config/routeConfig/routerConfig'
 import HomeIcon from 'shared/assets/icons/home.svg'
 import SheetIcon from 'shared/assets/icons/sheet.svg'
 import ProfileIcon from 'shared/assets/icons/profile.svg'
@@ -8,6 +8,7 @@ export interface ISidebarItem {
   path: string
   text: string
   icon: React.VFC<React.SVGProps<SVGSVGElement>>
+  authOnly?: boolean
 }
 
 export const ISidebarItemsList: ISidebarItem[] = [
@@ -24,6 +25,7 @@ export const ISidebarItemsList: ISidebarItem[] = [
   {
     path: RouterPath.profile,
     icon: ProfileIcon,
-    text: 'Профиль'
+    text: 'Профиль',
+    authOnly: true
   }
 ]
