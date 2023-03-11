@@ -1,5 +1,5 @@
 import { type IStateSchema } from 'app/providers/storeProvider'
-import { type AsyncThunkAction } from '@reduxjs/toolkit'
+import { type AsyncThunkAction, type DeepPartial } from '@reduxjs/toolkit'
 import { type AxiosStatic } from 'axios'
 import { mockedAxios } from 'features/authByLogin/model/services/login/login.test'
 
@@ -12,17 +12,20 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
   api: jest.MockedFunctionDeep<AxiosStatic>
   navigate: jest.MockedFn<any>
 
-  constructor (actionCreator: ActionCreatorThunk<Return, Arg, RejectedValue>) {
+  constructor (actionCreator: ActionCreatorThunk<Return, Arg, RejectedValue>, state?: DeepPartial<IStateSchema>) {
     this.actionCreator = actionCreator
     this.dispatch = jest.fn()
-    this.getState = jest.fn()
+    this.getState = jest.fn(() => state as IStateSchema)
     this.api = mockedAxios
     this.navigate = jest.fn()
   }
 
   async callThunk (arg: Arg) {
     const action = this.actionCreator(arg)
-    const result = await action(this.dispatch, this.getState, { api: this.api, navigate: this.navigate })
+    const result = await action(this.dispatch, this.getState, {
+      api: this.api,
+      navigate: this.navigate
+    })
 
     return result
   }

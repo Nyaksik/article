@@ -11,5 +11,10 @@
   "Отменить": "Cancel",
   "Сохранить": "Save",
   "Никнейм": "Nickname",
-  "Ссылка на аватар": "Link to the avatar"
+  "Ссылка на аватар": "Link to the avatar",
+  "Ошибка сервера": "Server error",
+  "Некорректный возраст": "Incorrect age",
+  "Имя и фамилия обязательны": "First and last name are required",
+  "Некорректный регион": "Incorrect country",
+  "Данные не указаны": "No data"
 }
