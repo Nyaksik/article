@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack serve --env port=3000",
+    "dev": "concurrently \"yarn:dev:front\" \"yarn:dev:server\"",
+    "dev:front": "webpack serve --env port=3000",
     "dev:server": "node ./jsonServer/index.js",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
@@ -89,6 +90,7 @@
     "-": "^0.0.1",
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.26.1",
+    "concurrently": "^7.6.0",
     "eslint-plugin-i18next": "^5.1.2",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",

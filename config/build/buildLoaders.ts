@@ -21,8 +21,9 @@ export default function ({ isDev }: BuildOptions): RuleSetRule[] {
           ['i18next-extract', {
             locales: ['ru', 'en'],
             keyAsDefaultValue: true
-          }]
-        ]
+          }],
+          isDev && require.resolve('react-refresh/babel')
+        ].filter(Boolean)
       }
     }
   }
